@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getClient } from '../../utils/db';
+import { sendSubscribedEmail } from '../../utils/mail';
 
 const requestHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 	switch (req.method) {
@@ -23,6 +24,7 @@ const subscribe = async (req: NextApiRequest, res: NextApiResponse) => {
 				name,
 			};
 			await subscribers.insertOne(document);
+			sendSubscribedEmail(document);
 			return res
 				.status(201)
 				.json({ ...document, message: 'app/new-subscriber-added' });
