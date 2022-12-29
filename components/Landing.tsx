@@ -3,12 +3,33 @@ import React, { useState } from 'react';
 import axios, { AxiosError } from 'axios';
 // import Line from '../assets/underline.svg'
 import Construction from '../assets/construction.svg';
+import Mailsent from "../assets/mailsent.svg";
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert, { AlertProps } from '@mui/material/Alert';
+
+const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
+	props,
+	ref,
+) {
+	return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
 
 const Landing = () => {
 	const [input, setInput] = useState({ name: '', email: '' });
 	const [disable, setDisable] = useState(true);
 	const [success, setSuccess] = useState(false);
 	const [error, setError] = useState({ error: false, message: '' });
+
+	const [open, setOpen] = useState(false);
+
+	const handleClose = (event?: React.SyntheticEvent | Event, reason?: string) => {
+		if (reason === 'clickaway') {
+		return;
+    }
+		setOpen(false);
+	};
+
+	console.log(error.message)
 
 	const handleInput =
 		(type: 'email' | 'name') =>
@@ -39,12 +60,26 @@ const Landing = () => {
 						error: true,
 						message: 'Email has already subscribed to our updates!',
 					});
+					setOpen(true);
 				}
 			}
 		}
 	};
 
 	return (
+		<>
+		<Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+			<Alert 
+				sx={{
+					background: `#ffbf0020`,
+					color: `#ffbf00`,
+					width: "100%",
+					boxShadow : "none"
+				}}
+				onClose={handleClose} severity="warning">
+			{error.message}
+			</Alert>
+		</Snackbar>
 		<div className="flex w-full flex-col px-[12px] pt-[112px] pb-[64px] md:px-[20px] md:pt-[128px] md:pb-[64px] lg:min-h-[100vh] lg:flex-row lg:bg-[url('../assets/hero-bg.svg')] lg:bg-right-top lg:bg-no-repeat lg:px-[5vw] lg:py-[148px]">
 			<div className='h-1/2 w-full p-[8px] md:py-[20px] md:px-[16px] lg:h-full lg:w-1/2 lg:p-[16px] '>
 				<h1 className='mb-[24px] text-[44px] font-medium text-[#23262f] md:text-[48px] lg:mb-[24px] lg:pr-[40px] lg:text-[56px]'>
@@ -91,7 +126,10 @@ const Landing = () => {
 						</div>
 					</form>
 				) : (
-					<div></div>
+					<div className='mt-12 w-full flex flex-col gap-4 items-center justify-center'>
+						<Image src={Mailsent} alt="success"  className="w-32"/>
+						<h1 className=''>Thank you for your response, we&apos;ll update you soon!</h1>
+					</div>
 				)}
 			</div>
 			<div className='h-1/2 w-full p-[8px] md:py-[20px] md:px-[16px] lg:h-full lg:w-1/2 lg:p-[16px] '>
@@ -102,6 +140,7 @@ const Landing = () => {
 				/>
 			</div>
 		</div>
+		</>
 	);
 };
 
