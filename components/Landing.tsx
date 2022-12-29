@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React, { useState } from 'react';
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 // import Line from '../assets/underline.svg'
 import Construction from '../assets/construction.svg';
 
@@ -25,8 +25,23 @@ const Landing = () => {
 	const handleSubscribe = async (e: React.ChangeEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		try {
-			alert(`${input.name} here's your email ${input.email}`);
-		} catch (error) {}
+			const response = await axios.post('/api/subscribe', { ...input });
+			if (response.data.message === 'app/new-subscriber-added') {
+				setSuccess(true);
+				setError({ error: false, message: '' });
+			}
+		} catch (error) {
+			setSuccess(false);
+			if (axios.isAxiosError(error)) {
+				if (error.response!.data.message === 'app/already-subscribed') {
+					setSuccess(false);
+					setError({
+						error: true,
+						message: 'Email has already subscribed to our updates!',
+					});
+				}
+			}
+		}
 	};
 
 	return (
