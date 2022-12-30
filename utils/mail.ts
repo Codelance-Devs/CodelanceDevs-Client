@@ -29,7 +29,7 @@ export const sendSubscribedEmail = ({ name, email }: SubscribedEmailProps) => {
           <img src="https://res.cloudinary.com/dm5excyly/image/upload/v1672321839/assets/branding/logo-black-png-full.png" alt="codelance devs" style="width: 40%; height: auto;" />
           <p>Hey ${name},</p>
           <p>It's Kunal here, Co-Founder of Codelance Devs and we're glad to see your interest in codelance devs and thanks for signing up for our service release waitlist.</p>
-          <p>Here's a list of services we'll be offering when we're service ready.
+          <p>Here's a list of services we'll be offering when we're in service from 17th January 2022.
           <ul>
             <li>Website Design</li>
             <li>Website Development and Deployment</li>

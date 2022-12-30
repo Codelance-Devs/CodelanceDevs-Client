@@ -6,6 +6,29 @@ import Construction from '../assets/construction.svg';
 import Mailsent from '../assets/mailsent.svg';
 import Snackbar from '@mui/material/Snackbar';
 import MuiAlert, { AlertProps } from '@mui/material/Alert';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import EmailIcon from '@mui/icons-material/Email';
+
+const socials = [
+	{
+		name: 'LinkedIn',
+		Icon: LinkedInIcon,
+		url: 'https://www.linkedin.com/company/codelance-devs/',
+	},
+	{
+		name: 'Twitter',
+		Icon: TwitterIcon,
+		url: 'https://twitter.com/CodelanceDevs',
+	},
+	{
+		name: 'Instagram',
+		Icon: InstagramIcon,
+		url: 'https://www.instagram.com/codelancedevs/',
+	},
+	{ name: 'Email', Icon: EmailIcon, url: 'contact@codelancedevs.com' },
+];
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
 	props,
@@ -84,7 +107,7 @@ const Landing = () => {
 				</Alert>
 			</Snackbar>
 			<div className="flex w-full flex-col px-[12px] pt-[112px] pb-[64px] md:px-[20px] md:pt-[128px] md:pb-[64px] lg:min-h-[100vh] lg:flex-row lg:bg-[url('../assets/hero-bg.svg')] lg:bg-right-top lg:bg-no-repeat lg:px-[5vw] lg:py-[148px]">
-				<div className='h-1/2 w-full p-[8px] md:py-[20px] md:px-[16px] lg:h-full lg:w-1/2 lg:p-[16px] '>
+				<div className='h-1/2 w-full p-[8px] md:py-[20px] md:px-[16px] lg:h-full lg:w-1/2 lg:p-[16px]'>
 					<h1 className='mb-[24px] text-[44px] font-medium text-[#23262f] md:text-[48px] lg:mb-[24px] lg:pr-[40px] lg:text-[56px]'>
 						<div className=" h-fit w-fit bg-[url('../assets/underline.svg')] bg-bottom bg-no-repeat">
 							Website
@@ -92,8 +115,14 @@ const Landing = () => {
 						under construction
 					</h1>
 					<p className='mb-[24px] text-[18px] font-normal text-[#777a85]'>
-						If your interested in our services fill in your details
-						and we will get back to you.
+						If your interested in our{' '}
+						<a
+							href='#services'
+							className='text-[#00E07B] transition-all hover:underline'
+						>
+							services
+						</a>{' '}
+						fill in your details and we will get back to you.
 					</p>
 					{!success ? (
 						<form onSubmit={handleSubscribe}>
@@ -141,8 +170,26 @@ const Landing = () => {
 							</h1>
 						</div>
 					)}
+					<ul className='mt-6 flex gap-4'>
+						{socials.map((social, idx) => (
+							<li key={idx} title={social.name}>
+								<a
+									className='rounded-full border-transparent p-2 text-[#777a85] transition-all hover:border hover:border-[#00E07B] hover:text-black'
+									href={
+										social.url.includes('@')
+											? `mailto${social.url}`
+											: social.url
+									}
+									target='_blank'
+									rel='noreferrer'
+								>
+									<social.Icon className='text-[18px]' />
+								</a>
+							</li>
+						))}
+					</ul>
 				</div>
-				<div className='h-1/2 w-full p-[8px] md:py-[20px] md:px-[16px] lg:h-full lg:w-1/2 lg:p-[16px] '>
+				<div className='h-1/2 w-full p-[8px] md:py-[20px] md:px-[16px] lg:h-full lg:w-1/2 lg:p-[16px]'>
 					<Image
 						src={Construction}
 						alt='Construction'
