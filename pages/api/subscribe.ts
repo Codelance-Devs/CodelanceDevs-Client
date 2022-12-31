@@ -2,6 +2,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { getClient } from '../../utils/db';
 import { sendSubscribedEmail } from '../../utils/mail';
 
+export const config = {
+	type: 'experimental-background',
+};
+
 const requestHandler = async (req: NextApiRequest, res: NextApiResponse) => {
 	switch (req.method) {
 		case 'POST':
