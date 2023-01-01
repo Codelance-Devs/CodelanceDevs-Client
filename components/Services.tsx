@@ -4,9 +4,32 @@
 
 // Dependencies
 import React from 'react';
-import ComputerIcon from '@mui/icons-material/Computer';
-import DesignServicesIcon from '@mui/icons-material/DesignServices';
-import WebIcon from '@mui/icons-material/Web';
+
+interface Props {
+	className: string;
+}
+
+const ComputerIcon:React.FC<Props> = (props) => {
+	return (
+		<svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 group-hover:text-[#00E07B] transition-all duration-300">
+			<path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
+		</svg>
+	)
+}
+const DesignIcon:React.FC<Props> = (props) => {
+	return (
+		<svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 group-hover:text-[#00E07B] transition-all duration-300">
+			<path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 00-5.78 1.128 2.25 2.25 0 01-2.4 2.245 4.5 4.5 0 008.4-2.245c0-.399-.078-.78-.22-1.128zm0 0a15.998 15.998 0 003.388-1.62m-5.043-.025a15.994 15.994 0 011.622-3.395m3.42 3.42a15.995 15.995 0 004.764-4.648l3.876-5.814a1.151 1.151 0 00-1.597-1.597L14.146 6.32a15.996 15.996 0 00-4.649 4.763m3.42 3.42a6.776 6.776 0 00-3.42-3.42" />
+		</svg>
+	)
+}
+const TemplateIcon:React.FC<Props> = (props) => {
+	return (
+		<svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 group-hover:text-[#00E07B] transition-all duration-300">
+			<path strokeLinecap="round" strokeLinejoin="round" d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-2.25z" />
+		</svg>
+	)
+}
 
 const services = [
 	{
@@ -17,13 +40,13 @@ const services = [
 	},
 	{
 		title: 'Design',
-		Icon: DesignServicesIcon,
+		Icon: DesignIcon,
 		description:
 			"Get custom designs produced that are optimised for the kind of users you want to attract. We'll provide you with the best design possible by using UI/UX design principles and tools like Figma and Web Flow.",
 	},
 	{
 		title: 'Templates',
-		Icon: WebIcon,
+		Icon: TemplateIcon,
 		description:
 			'Are you thinking about trying out a self-managed service? WordPress, Web Flow, and even our own code templates are at your disposal, ready to be modified and put to use in a matter of minutes.',
 	},
@@ -31,38 +54,28 @@ const services = [
 
 const Services = () => {
 	return (
-		<div className='flex h-full w-full items-center justify-center px-3 pb-20 md:px-[20px] lg:px-[5vw]'>
-			<div className='flex h-full w-full flex-col items-center justify-center p-2 md:px-[16px] lg:p-[16px]'>
-				<h2
-					id='services'
-					className='text-[32px] font-medium text-[#23262f] md:text-[40px] lg:text-[48px]'
-				>
-					Services we offer
-				</h2>
-				<p className='text-[18px] font-normal text-[#777a85]'>
-					Get the best service that you need starting from 17th
-					January 2023.
-				</p>
-				<ul className='mt-6 flex flex-wrap items-center justify-center gap-5'>
-					{services.map((service, idx) => (
-						<li
-							key={idx}
-							className='flex min-h-[420px] w-full flex-col justify-start rounded-[40px] bg-[#F6F7FC] py-14 px-10 md:w-1/3 lg:w-3/12'
-						>
-							<div className='flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-md'>
-								<service.Icon className='text-[40px]' />
+		<>
+		<div id="services" className="px-[12px] py-[64px] md:px-[20px] lg:px-[5vw] lg:py-[148px] grid lg:grid-cols-3 ">
+            <div className="flex flex-col items-center justify-start text-center p-[8px] md:p-[16px] lg:col-span-3">
+                <h1 className="mb-[16px] text-[32px] md:text-[34px] lg:text-[40px] font-medium text-[#23262f] select-text">Looking to find web services for your needs?</h1>
+                <p className="text-[18px] text-[#4c4f58]">Get the best service starting from 17th
+					January 2023.</p>
+            </div>
+			{
+				services.map((service, idx) => (
+					<div key={idx} className="px-[8px] py-[16px] md:p-[16px] w-full ">
+						<div className="px-[24px] py-[40px] md:px-[40px] md:py-[56px] w-full h-full bg-[#f6f7fc] group rounded-3xl select-none">
+							<div className='flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-sm mb-[16px]'>
+								<service.Icon className='' />
 							</div>
-							<h3 className='mt-4 text-xl font-semibold'>
-								{service.title}
-							</h3>
-							<p className='mt-4 text-base text-[#777a85]'>
-								{service.description}
-							</p>
-						</li>
-					))}
-				</ul>
-			</div>
-		</div>
+							<h1 className="mb-[16px] text-[20px] md:text-[22px] text-[#23262f]">{service.title}</h1>
+							<p className="mb-[24px] text-[#777a85] text-justify">{service.description}</p>
+						</div>
+					</div>
+				))
+			}
+        </div>
+		</>
 	);
 };
 

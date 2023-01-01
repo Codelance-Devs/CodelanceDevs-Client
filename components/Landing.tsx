@@ -40,7 +40,6 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(function Alert(
 
 const Landing = () => {
 	const [input, setInput] = useState({ name: '', email: '' });
-	const [disable, setDisable] = useState(true);
 	const [success, setSuccess] = useState(false);
 	const [error, setError] = useState({ error: false, message: '' });
 
@@ -62,10 +61,6 @@ const Landing = () => {
 			setInput((prev) => {
 				return { ...prev, [type]: e.target.value };
 			});
-			if (input.email !== '' && input.name !== '') {
-				return setDisable(false);
-			}
-			setDisable(true);
 		};
 
 	const handleSubscribe = async (e: React.ChangeEvent<HTMLFormElement>) => {
@@ -99,8 +94,8 @@ const Landing = () => {
 			<Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
 				<Alert
 					sx={{
-						background: `#ffbf0020`,
-						color: `#ffbf00`,
+						background: `#fde047`,
+						color: `#d97706`,
 						width: '100%',
 						boxShadow: 'none',
 					}}
@@ -110,10 +105,10 @@ const Landing = () => {
 					{error.message}
 				</Alert>
 			</Snackbar>
-			<div className="flex w-full flex-col px-[12px] pt-[112px] pb-[64px] md:px-[20px] md:pt-[128px] md:pb-[64px] lg:min-h-[100vh] lg:flex-row lg:bg-[url('../assets/hero-bg.svg')] lg:bg-right-top lg:bg-no-repeat lg:px-[5vw] lg:py-[148px]">
+			<div className="flex w-full flex-col px-[12px] pt-[112px] pb-[64px] md:px-[20px] md:pt-[128px] md:pb-[64px] lg:min-h-[100vh] lg:flex-row lg:bg-[url('/hero-bg.svg')] lg:bg-right-top lg:bg-no-repeat lg:px-[5vw] lg:py-[148px]">
 				<div className='h-1/2 w-full p-[8px] md:py-[20px] md:px-[16px] lg:h-full lg:w-1/2 lg:p-[16px]'>
 					<h1 className='mb-[24px] text-[44px] font-medium text-[#23262f] md:text-[48px] lg:mb-[24px] lg:pr-[40px] lg:text-[56px]'>
-						<div className=" h-fit w-fit bg-[url('../assets/underline.svg')] bg-bottom bg-no-repeat">
+						<div className=" h-fit w-fit bg-[url('/underline.svg')] bg-bottom bg-no-repeat">
 							Website
 						</div>
 						under construction
@@ -122,7 +117,7 @@ const Landing = () => {
 						If your interested in our{' '}
 						<a
 							href='#services'
-							className='text-[#00E07B] transition-all hover:underline'
+							className='text-[#00E07B] outline-none underline'
 						>
 							services
 						</a>{' '}
@@ -133,7 +128,7 @@ const Landing = () => {
 							<div className='flex w-full flex-col gap-6 md:w-3/4'>
 								<input
 									type='text'
-									className='rounded p-[16px] outline outline-gray-300 focus:outline-[#00E07B]'
+									className='rounded-lg p-[16px] outline outline-gray-300 focus:outline-[#00E07B]'
 									placeholder='Name'
 									required
 									value={input.name}
@@ -141,19 +136,14 @@ const Landing = () => {
 								/>
 								<input
 									type='email'
-									className='rounded p-[16px] outline outline-gray-300 focus:outline-[#00E07B]'
+									className='rounded-lg p-[16px] outline outline-gray-300 focus:outline-[#00E07B]'
 									placeholder='Email'
 									required
 									value={input.email}
 									onChange={handleInput('email')}
 								/>
 								<button
-									className={`w-full rounded-xl bg-[#00E07B] py-[20px] px-[64px] transition-all duration-300 md:w-fit ${
-										disable
-											? 'opacity-40'
-											: 'cursor-pointer hover:bg-[#05c870]'
-									}`}
-									disabled={disable}
+									className={`w-full rounded-lg bg-[#00E07B] hover:bg-[#01cd71] py-[20px] px-[64px] transition-all duration-300 md:w-fit`}
 								>
 									<h1 className='text-[14px] font-medium text-[#23262f]'>
 										Get Notified
@@ -174,11 +164,11 @@ const Landing = () => {
 							</h1>
 						</div>
 					)}
-					<ul className='mt-6 flex gap-4'>
+					<ul className='mt-6 flex justify-center gap-8 md:w-52 md:justify-between md:gap-0'>
 						{socials.map((social, idx) => (
 							<li key={idx} title={social.name}>
 								<a
-									className='rounded-full border-transparent p-2 text-[#777a85] transition-all hover:border hover:border-[#00E07B] hover:text-black'
+									className='text-[#777a85] transition-all duration-300 hover:text-[#00E07B]'
 									href={
 										social.url.includes('@')
 											? `mailto${social.url}`
@@ -187,7 +177,7 @@ const Landing = () => {
 									target='_blank'
 									rel='noreferrer'
 								>
-									<social.Icon className='text-[18px]' />
+									<social.Icon className='text-md' />
 								</a>
 							</li>
 						))}

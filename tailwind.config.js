@@ -10,7 +10,7 @@ module.exports = {
         pageLoad: {
           '0%': {top: '0',},
           '33%': {top: '0', },
-          '100%': {top: '-100%',},
+          '100%': {top: '-110%',},
         },
         pageLoadImage: {
           '0%': {opacity: 0, top: '2rem'},
