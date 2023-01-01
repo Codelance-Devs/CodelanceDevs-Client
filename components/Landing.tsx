@@ -72,7 +72,7 @@ const Landing = () => {
 		e.preventDefault();
 		try {
 			const response = await axios.post(
-				`${CODELANCE_DEVS_SERVER_BASE_URL}/api/subscribe`,
+				`https://api.codelancedevs.com/api/subscribe`,
 				{ ...input }
 			);
 			if (response.data.message === 'app/new-subscriber-added') {
