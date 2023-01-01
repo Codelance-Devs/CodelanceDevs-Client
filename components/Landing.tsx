@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import axios, { AxiosError } from 'axios';
 // import Line from '../assets/underline.svg'
+import { CODELANCE_DEVS_SERVER_BASE_URL } from '../config';
 import Construction from '../assets/construction.svg';
 import Mailsent from '../assets/mailsent.svg';
 import Snackbar from '@mui/material/Snackbar';
@@ -70,7 +71,10 @@ const Landing = () => {
 	const handleSubscribe = async (e: React.ChangeEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		try {
-			const response = await axios.post('/api/subscribe', { ...input });
+			const response = await axios.post(
+				`${CODELANCE_DEVS_SERVER_BASE_URL}/api/subscribe`,
+				{ ...input }
+			);
 			if (response.data.message === 'app/new-subscriber-added') {
 				setSuccess(true);
 				setError({ error: false, message: '' });

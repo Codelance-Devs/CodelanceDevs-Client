@@ -1,3 +1,4 @@
+import React from 'react';
 import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
@@ -23,7 +24,7 @@ export default function Document() {
 				/>
 				<meta
 					property='og:image'
-					content='https://res.cloudinary.com/dm5excyly/image/upload/v1672321839/assets/branding/logo-black-png-full.png'
+					content='https://res.cloudinary.com/dm5excyly/image/upload/v1672321839/assets/branding/logo-white-png-full.png'
 				/>
 
 				{/* <!-- Twitter --> */}
@@ -40,7 +41,7 @@ export default function Document() {
 				/>
 				<meta
 					property='twitter:image'
-					content='https://res.cloudinary.com/dm5excyly/image/upload/v1672321839/assets/branding/logo-black-png-full.png'
+					content='https://res.cloudinary.com/dm5excyly/image/upload/v1672321839/assets/branding/logo-white-png-full.png'
 				/>
 			</Head>
 			<body className='min-h-screen w-full bg-[#fffff]'>
