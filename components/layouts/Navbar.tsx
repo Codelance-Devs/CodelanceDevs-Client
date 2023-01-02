@@ -55,8 +55,8 @@ const Navbar = () => {
 				>
 					FAQ
 				</a>
-				<button className='ml-[40px] w-fit rounded-xl border border-[#eaedf8] bg-transparent py-[16px] px-[24px] transition-all duration-300 hover:border-[#05c87020] hover:bg-[#05c87020]'>
-					<h1 className='text-[14px] font-normal text-[#05c870]'>
+				<button className='ml-[40px] w-fit rounded-xl border border-[#eaedf8] bg-transparent py-[16px] px-[24px] transition-all duration-300 hover:border-[#00E07B20] hover:bg-[#00E07B20]'>
+					<h1 className='text-[14px] font-normal text-[#00E07B]'>
 						Get Quotation
 					</h1>
 				</button>
