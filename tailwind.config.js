@@ -6,16 +6,19 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary: '#00E07B'
+      },
       keyframes: {
         pageLoad: {
-          '0%': {top: '0',},
-          '33%': {top: '0', },
-          '100%': {top: '-110%',},
+          '0%': { top: '0', },
+          '33%': { top: '0', },
+          '100%': { top: '-110%', },
         },
         pageLoadImage: {
-          '0%': {opacity: 0, top: '2rem'},
-          '80%': {opacity: 1, top: '-0.4rem'},
-          '100%': {top: '1'}
+          '0%': { opacity: 0, top: '2rem' },
+          '80%': { opacity: 1, top: '-0.4rem' },
+          '100%': { top: '1' }
         }
       },
       animation: {

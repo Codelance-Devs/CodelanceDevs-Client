@@ -1,3 +1,8 @@
+/**
+ * Navbar Component
+ */
+
+// Dependencies
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 import Icon from '../../assets/icon.png';
@@ -37,21 +42,21 @@ const Navbar = () => {
 				<MenuOutlinedIcon className='' />
 			</div>
 			<div className='hidden items-center justify-start text-[14px] lg:flex'>
-				<h1 className='mx-[12px] cursor-pointer px-[12px] py-[8px] transition-all duration-300 hover:text-[#00E07B]'>
+				<h1 className='mx-[12px] cursor-pointer px-[12px] py-[8px] transition-all duration-300 hover:text-primary'>
 					How we work
 				</h1>
 				<a
 					href='#services'
-					className='mx-[12px] cursor-pointer px-[12px] py-[8px] transition-all duration-300 hover:text-[#00E07B]'
+					className='mx-[12px] cursor-pointer px-[12px] py-[8px] transition-all duration-300 hover:text-primary'
 				>
 					Services
 				</a>
-				<h1 className='mx-[12px] cursor-pointer px-[12px] py-[8px] transition-all duration-300 hover:text-[#00E07B]'>
+				<h1 className='mx-[12px] cursor-pointer px-[12px] py-[8px] transition-all duration-300 hover:text-primary'>
 					Solutions
 				</h1>
 				<a
 					href='#faqs'
-					className='mx-[12px] cursor-pointer px-[12px] py-[8px] transition-all duration-300 hover:text-[#00E07B]'
+					className='mx-[12px] cursor-pointer px-[12px] py-[8px] transition-all duration-300 hover:text-primary'
 				>
 					FAQ
 				</a>

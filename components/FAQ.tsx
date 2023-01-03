@@ -1,21 +1,12 @@
+/**
+ * FAQ Section
+ */
+
+// Dependencies
 import React from 'react';
 import { Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
 import ArrowIcon from './icons/ArrowIcon';
-
-const faqs = [
-	{
-		question: 'How do I create a finnest account?',
-		answer: 'Et amet est cras orci, dignissim. Adipiscing laoreet hendrerit feugiat id sodales ullamcorper. Fames dictum sapien neque, proin malesuada lorem eget urna. Non nec mi tristique eu pellentesque malesuada libero vulputate tristique. Aliquam libero nunc dictumst risus, tellus nisl venenatis leo magna. Nibh suspendisse feugiat felis volutpat ac nibh nunc laoreet. Facilisis sed egestas sed at dictumst. Aliquet vitae ut non est euismod faucibus dolor.',
-	},
-	{
-		question: 'hello there?',
-		answer: 'lorem ipsum, something something I want to drop out',
-	},
-	{
-		question: 'hello there?',
-		answer: 'lorem ipsum, something something I want to drop out',
-	},
-];
+import FAQS from '../data/faqs';
 
 const FAQ = () => {
 	return (
@@ -28,7 +19,7 @@ const FAQ = () => {
 						</h2>
 					</div>
 					<div className='flex w-full flex-col items-center justify-center p-2 md:p-4'>
-						{faqs.map((faq, idx) => (
+						{FAQS.map((faq, idx) => (
 							<Accordion
 								key={idx}
 								sx={{

@@ -1,3 +1,8 @@
+/**
+ * Landing Section
+ */
+
+// Dependencies
 import Image from 'next/image';
 import React from 'react';
 import Construction from '../assets/construction.svg';
@@ -17,7 +22,7 @@ const Landing = () => {
 					online presence and increase revenue.
 				</p>
 				<div className='pt-[20px]'>
-					<button className='w-full rounded-xl bg-[#00E07B] py-[20px] px-[64px] transition-all duration-300 hover:bg-[#05c870] md:w-fit'>
+					<button className='w-full rounded-xl bg-primary py-[20px] px-[64px] transition-all duration-300 hover:bg-[#05c870] md:w-fit'>
 						<h1 className='text-[14px] font-medium text-[#23262f]'>
 							Get Quotation
 						</h1>
