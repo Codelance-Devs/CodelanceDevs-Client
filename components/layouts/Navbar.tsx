@@ -4,6 +4,7 @@
 
 // Dependencies
 import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import Icon from '../../assets/icon.png';
 import MenuOutlinedIcon from '../icons/MenuOutlinedIcon';
@@ -12,7 +13,7 @@ const Navbar = () => {
 	const [color, setColor] = useState('bg-transparent');
 	const changeNavbarColor = () => {
 		if (window.scrollY >= 80) {
-			setColor('bg-[#fff]');
+			setColor('bg-white');
 		} else {
 			setColor('bg-transparent');
 		}
@@ -22,10 +23,10 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<div
-			className={`z-10 mx-auto flex w-full p-[12px] md:px-[20px] md:py-[12px] lg:px-[5vw] lg:py-[20px] ${color} fixed items-center justify-between`}
+		<nav
+			className={`z-10 mx-auto flex w-full p-3 md:px-5 md:py-3 lg:px-[5vw] lg:py-5 ${color} fixed items-center justify-between`}
 		>
-			<a href='' className='flex items-center'>
+			<Link href='/' className='flex items-center'>
 				<Image
 					src={Icon.src}
 					alt='Codelance Devs'
@@ -37,36 +38,45 @@ const Navbar = () => {
 					Codelance <br />
 					Devs
 				</h1>
-			</a>
+			</Link>
 			<div className='p-[18px] lg:hidden'>
-				<MenuOutlinedIcon className='' />
+				<MenuOutlinedIcon />
 			</div>
 			<div className='hidden items-center justify-start text-[14px] lg:flex'>
-				<h1 className='mx-[12px] cursor-pointer px-[12px] py-[8px] transition-all duration-300 hover:text-primary'>
+				<a
+					href='#'
+					className='mx-3 cursor-pointer px-3 py-2 transition-all duration-300 hover:text-primary'
+				>
 					How we work
-				</h1>
+				</a>
 				<a
 					href='#services'
-					className='mx-[12px] cursor-pointer px-[12px] py-[8px] transition-all duration-300 hover:text-primary'
+					className='mx-3 cursor-pointer px-3 py-2 transition-all duration-300 hover:text-primary'
 				>
 					Services
 				</a>
-				<h1 className='mx-[12px] cursor-pointer px-[12px] py-[8px] transition-all duration-300 hover:text-primary'>
+				<a
+					href='#'
+					className='mx-3 cursor-pointer px-3 py-2 transition-all duration-300 hover:text-primary'
+				>
 					Solutions
-				</h1>
+				</a>
 				<a
 					href='#faqs'
-					className='mx-[12px] cursor-pointer px-[12px] py-[8px] transition-all duration-300 hover:text-primary'
+					className='mx-3 cursor-pointer px-3 py-2 transition-all duration-300 hover:text-primary'
 				>
 					FAQ
 				</a>
-				<button className='ml-[40px] w-fit rounded-xl border border-[#eaedf8] bg-transparent py-[16px] px-[24px] transition-all duration-300 hover:border-[#00E07B20] hover:bg-[#00E07B20]'>
-					<h1 className='text-[14px] font-normal text-[#00E07B]'>
+				<button className='ml-10 w-fit rounded-xl border border-[#eaedf8] bg-transparent py-4 px-6 transition-all duration-300 hover:border-[#00E07B20] hover:bg-[#00E07B20]'>
+					<a
+						href='#'
+						className='text-[14px] font-normal text-[#00E07B]'
+					>
 						Get Quotation
-					</h1>
+					</a>
 				</button>
 			</div>
-		</div>
+		</nav>
 	);
 };
 

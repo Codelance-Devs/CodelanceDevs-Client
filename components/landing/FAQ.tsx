@@ -5,8 +5,8 @@
 // Dependencies
 import React from 'react';
 import { Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
-import ArrowIcon from './icons/ArrowIcon';
-import FAQS from '../data/faqs';
+import ArrowIcon from '../icons/ArrowIcon';
+import FAQS from '../../data/faqs';
 
 const FAQ = () => {
 	return (
@@ -29,7 +29,7 @@ const FAQ = () => {
 								className='group mx-auto mb-6 w-full max-w-[770px] pb-4'
 							>
 								<AccordionSummary expandIcon={<ArrowIcon />}>
-									<span className='text-base font-medium transition-all duration-300 group-hover:text-[#00E07B] md:text-lg lg:text-[22px]'>
+									<span className='text-base font-medium transition-all duration-300 group-hover:text-primary md:text-lg lg:text-[22px]'>
 										{faq.question}
 									</span>
 								</AccordionSummary>
