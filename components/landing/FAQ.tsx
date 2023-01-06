@@ -10,7 +10,7 @@ import FAQS from '../../data/faqs';
 
 const FAQ = () => {
 	return (
-		<section className='flex w-full' id='faqs'>
+		<section className='scroll-mt-24 flex w-full' id='faqs'>
 			<div className='mx-auto max-w-[1440px] px-3 py-16 md:px-5 lg:px-[5vw] lg:py-[148px]'>
 				<div className='flex flex-col items-stretch justify-start text-center'>
 					<div className='w-full justify-center p-2 md:p-4'>

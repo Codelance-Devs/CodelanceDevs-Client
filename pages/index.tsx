@@ -4,6 +4,7 @@ import Landing from '../components/landing/Landing';
 import PageLoader from '../components/PageLoader';
 import Services from '../components/landing/Services';
 import PublicLayout from '../layouts/public';
+import Contact from '../components/landing/Contact';
 
 export default function Home() {
 	return (
@@ -16,6 +17,7 @@ export default function Home() {
 				<Landing />
 				<Services />
 				<FAQ />
+				<Contact />
 			</PublicLayout>
 		</div>
 	);

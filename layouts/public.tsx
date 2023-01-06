@@ -5,11 +5,11 @@ import { NextPage } from 'next';
 
 const PublicLayout: NextPage<PropsWithChildren> = ({ children }) => {
 	return (
-		<>
+		<div>
 			<Navbar />
 			{children}
 			<Footer />
-		</>
+		</div>
 	);
 };
 
