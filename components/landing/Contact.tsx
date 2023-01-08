@@ -7,7 +7,7 @@ const Contact = () => {
 	};
 
 	return (
-		<section className='w-full scroll-mt-24 bg-primary text-white' id='getQuote'>
+		<section className='w-full scroll-mt-36 bg-primary text-white' id='getQuote'>
 			<div className='mx-auto w-full max-w-[1440px] px-3 py-16 md:px-5 lg:px-[5vw] lg:py-[148px]'>
 				<div className='flex w-full flex-col items-stretch justify-start lg:flex-row lg:gap-10'>
 					<div className='w-full p-2 lg:p-4'>

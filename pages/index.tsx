@@ -8,7 +8,7 @@ import Contact from '../components/landing/Contact';
 
 export default function Home() {
 	return (
-		<div>
+		<div className='selection:bg-[#00E07B10]'>
 			<Head>
 				<title>Codelance Devs</title>
 			</Head>
