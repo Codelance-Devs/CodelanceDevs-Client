@@ -25,7 +25,7 @@ const Navbar = () => {
 
 	const [color, setColor] = useState('bg-transparent');
 	const changeNavbarColor = () => {
-		if (window.scrollY >= 80) {
+		if (window.scrollY >= 50) {
 			setColor('bg-white');
 		} else {
 			setColor('bg-transparent');
@@ -48,20 +48,20 @@ const Navbar = () => {
 			text: 'FAQs',
 			link: '/#faqs',
 		},
-		{
-			text: 'Contact',
-			link: '/#contact',
-		},
+		// {
+		// 	text: 'Contact',
+		// 	link: '/#contact',
+		// },
 	]
 
 	return (
 		<nav
-			className={` ${color} w-full fixed`}
+			className={` ${color === "bg-transparent" ? "border-0" : "border-b"} ${color} transition-all duration-300 w-full fixed`}
 		>
-			<div className='mx-auto z-10 flex w-full p-3 md:px-5 md:py-3 lg:px-[5vw] lg:py-5  max-w-[1440px] items-center justify-between'>
+			<div className='mx-auto z-50 flex w-full p-3 md:px-5 md:py-3 lg:px-[5vw] lg:py-5  max-w-[1440px] items-center justify-between'>
 				<Link href='/' className='flex items-center'>
 					<Image
-						src={Icon.src}
+						src={'https://res.cloudinary.com/dm5excyly/image/upload/v1672321839/assets/branding/logo-png-square.png'}
 						alt='Codelance Devs'
 						width={100}
 						height={100}
@@ -104,7 +104,7 @@ const Navbar = () => {
 									</div>
 								))
 							}
-							<Link onClick={handleClose} href='#getQuote' className='w-fit mx-3 rounded-lg border border-[#eaedf8] bg-transparent py-4 px-6 transition-all duration-300 hover:border-[#00E07B20] hover:bg-[#00E07B20]'>
+							<Link onClick={handleClose} href='/#getQuote' className='w-fit mx-3 rounded-lg border border-[#eaedf8] bg-transparent py-4 px-6 transition-all duration-300 hover:border-[#00E07B20] hover:bg-[#00E07B20]'>
 								<button
 									
 									className='text-[14px] m-4 font-normal text-[#00E07B]'
@@ -132,14 +132,14 @@ const Navbar = () => {
 							</a>
 						))
 					}
-					<a href='#getQuote' className='ml-10 w-fit rounded-lg border border-[#eaedf8] bg-transparent py-4 px-6 transition-all duration-300 hover:border-[#00E07B20] hover:bg-[#00E07B20]'>
+					<Link href='/#getQuote' className='ml-10 w-fit rounded-lg border border-[#eaedf8] bg-transparent py-4 px-6 transition-all duration-300 hover:border-[#00E07B20] hover:bg-[#00E07B20]'>
 						<button
 							
 							className='text-[14px] font-normal text-[#00E07B]'
 						>
 							Get Quotation
 						</button>
-					</a>
+					</Link>
 				</div>
 			</div>
 		</nav>

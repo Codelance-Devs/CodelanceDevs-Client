@@ -53,7 +53,7 @@ const HowWeWork = () => {
 		<div className='mx-auto w-full max-w-[1440px] scroll-mt-24 px-3 py-16 md:px-5 lg:grid-cols-5 lg:px-[5vw] lg:pb-[148px]'>
 			<div className='mx-auto w-full max-w-[1440px] px-4 py-12'>
 				<div className='mx-4 grid gap-4 sm:grid-cols-12'>
-					<div className='-z-10 col-span-12 mb-4 sm:col-span-3'>
+					<div className='-z-10 col-span-12 mb-4 lg:mb-0 sm:col-span-3'>
 						<div className='sticky top-28 text-center sm:text-left sm:before:mx-0'>
 							<h3 className='select-text text-[32px] font-medium text-[#23262f] md:text-[34px] lg:text-[40px]'>
 								How we{' '}
@@ -69,12 +69,12 @@ const HowWeWork = () => {
 							</span>
 						</div>
 					</div>
-					<div className='relative -z-10 col-span-12 space-y-6 px-4 sm:col-span-9 lg:ml-8'>
+					<div className='relative -z-10 col-span-12 space-y-6 lg:px-4 sm:col-span-9 lg:ml-8'>
 						<div className='relative col-span-12 space-y-12 before:dark:bg-gray-700 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:-left-3 sm:before:w-0.5 lg:px-4'>
 							{services.map((service, idx) => (
 								<div
 									key={idx}
-									className='flex flex-col before:dark:bg-primary sm:relative sm:before:absolute sm:before:top-2 sm:before:left-[-35px] sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full'
+									className='flex flex-col items-center md:items-start before:dark:bg-primary sm:relative sm:before:absolute sm:before:top-2 sm:before:left-[-35px] sm:before:z-[1] sm:before:h-4 sm:before:w-4 sm:before:rounded-full'
 								>
 									<div className='mb-4 -mt-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-white shadow-md'>
 										{service.icon}
@@ -85,7 +85,7 @@ const HowWeWork = () => {
 									{/* <time className="text-xs uppercase tracking-wide dark:text-gray-400">
                                 Dec 2020
                             </time> */}
-									<p className='mt-3'>
+									<p className='mt-3 text-center md:text-justify'>
 										{service.description}
 									</p>
 								</div>

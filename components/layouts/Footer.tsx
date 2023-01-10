@@ -17,7 +17,7 @@ const Footer = () => {
 						<div className='flex flex-col items-center justify-between md:items-start lg:flex-row'>
 							<a href='' className='flex items-center'>
 								<Image
-									src={Icon.src}
+									src={"https://res.cloudinary.com/dm5excyly/image/upload/v1672321839/assets/branding/logo-png-square.png"}
 									alt='Codelance Devs'
 									width={100}
 									height={100}
@@ -30,7 +30,7 @@ const Footer = () => {
 							</a>
 							<div className='flex w-full flex-col items-center justify-between md:flex-row lg:justify-end'>
 								<div className='mb-4 flex flex-col items-stretch justify-start text-center md:flex-row'>
-									<a className='p-3 text-[14px] md:px-3 md:py-4 lg:mx-3 lg:py-2 '>
+									{/* <a className='p-3 text-[14px] md:px-3 md:py-4 lg:mx-3 lg:py-2 '>
 										How we work
 									</a>
 									<a className='p-3 text-[14px] md:px-3 md:py-4 lg:mx-3 lg:py-2 '>
@@ -41,7 +41,7 @@ const Footer = () => {
 									</a>
 									<a className='p-3 text-[14px] md:px-3 md:py-4 lg:mx-3 lg:py-2 '>
 										FAQs
-									</a>
+									</a> */}
 								</div>
 								<div className='mb-4 flex items-center justify-start lg:ml-[64px]'>
 									<a

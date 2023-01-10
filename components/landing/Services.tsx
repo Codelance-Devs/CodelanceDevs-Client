@@ -43,7 +43,7 @@ const Services = () => {
 	return (
 		<div
 			id='services'
-			className='grid scroll-mt-24 px-3 py-16 md:px-5 lg:grid-cols-3 lg:px-[5vw] lg:py-[148px] '
+			className='grid max-w-[1440px] mx-auto scroll-mt-18 px-3 py-16 md:px-5 lg:grid-cols-3 lg:px-[5vw] lg:py-[148px] '
 		>
 			<div className='flex flex-col items-center justify-start p-[8px] text-center md:p-4 lg:col-span-3'>
 				<h1 className='mb-4 select-text text-[32px] font-medium text-[#23262f] md:text-[34px] lg:text-[40px]'>
