@@ -14,8 +14,8 @@ const WebDevelopment = () => {
                 <title>Web Development</title>
             </Head>
             <PublicLayout>
-                <div className="mx-auto flex w-full max-w-[1440px] flex-col px-3 DesignIconmd:px-5 lg:px-[5vw]">
-                    <section className="mx-auto flex w-full flex-col lg:flex-row lg:py-[148px]">
+                <div className="DesignIconmd:px-5 mx-auto flex w-full max-w-[1440px] flex-col px-3 lg:px-[5vw] ">
+                    <section className="mx-auto flex w-full flex-col lg:flex-row lg:py-[148px] ">
                         <div className="h-1/2 w-full p-2 md:py-5 md:px-4 lg:h-full lg:w-1/2 lg:p-4 ">
                             <h1 className="mb-4 select-text text-[32px] font-medium text-[#23262f] md:text-[34px] lg:text-[40px]">
                                 Web Development
@@ -41,13 +41,13 @@ const WebDevelopment = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="h-1/2 w-full p-2 md:py-5 md:px-4 lg:h-full lg:w-1/2 lg:p-4 ">
+                        <div className="flex h-1/2 w-full items-center justify-center p-2 md:py-5 md:px-4 lg:h-full lg:w-1/2 lg:p-4 ">
                             <Image
                                 src={WebDev.src}
                                 width={100}
                                 height={100}
                                 alt="WebDev"
-                                className="w-full"
+                                className="w-full max-w-[400px]"
                             />
                         </div>
                     </section>
