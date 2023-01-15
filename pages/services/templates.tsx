@@ -15,8 +15,8 @@ const Templates = () => {
 				<title>Templates</title>
 			</Head>
 			<PublicLayout>
-				<div className='DesignIconmd:px-5 mx-auto flex w-full max-w-[1440px] flex-col px-3 lg:px-[5vw]'>
-					<section className='mx-auto flex w-full flex-col lg:flex-row lg:py-[148px]'>
+				<div className='mx-auto flex w-full max-w-[1440px] flex-col px-3 md:px-5 lg:px-[5vw]'>
+					<section className='mx-auto flex w-full flex-col pt-28 md:pt-32 lg:flex-row lg:py-[148px]'>
 						<div className='h-1/2 w-full p-2 md:py-5 md:px-4 lg:h-full lg:w-1/2 lg:p-4 '>
 							<h1 className='mb-4 select-text text-[32px] font-medium text-[#23262f] md:text-[34px] lg:text-[40px]'>
 								Templates and No-Code
@@ -57,7 +57,7 @@ const Templates = () => {
 							/>
 						</div>
 					</section>
-					<section className='group -z-[2] mt-10 grid grid-cols-1 rounded-xl bg-primary px-8 py-12 text-white transition-all duration-300 md:grid-cols-2'>
+					<section className='group -z-[2] mt-10 grid grid-cols-1 rounded-xl bg-primary px-8 py-12 text-white md:grid-cols-2 lg:mb-[74px]'>
 						<div className=''>
 							<h3 className='text-[24px] font-semibold md:text-[28px]'>
 								Customizable Code-based Templates: Coming Soon
@@ -69,13 +69,13 @@ const Templates = () => {
 								available soon and will keep you updated.
 							</p>
 						</div>
-						<div className='relative -z-[1]'>
+						<div className='relative -z-[1] scale-95 transition-all duration-300 group-hover:scale-105'>
 							<Image
 								src={TemplateWaitImg.src}
 								width={100}
 								height={100}
 								alt='WebDev'
-								className='absolute top-1/2 left-1/2 hidden w-full max-w-[340px] -translate-x-1/2 -translate-y-1/2 -rotate-12 grayscale-0 transition-all duration-300 group-hover:-rotate-[16deg] md:inline'
+								className='absolute top-1/2 left-1/2 hidden w-full max-w-[340px] -translate-x-1/2 -translate-y-1/2 -rotate-12 md:inline'
 							/>
 						</div>
 					</section>
