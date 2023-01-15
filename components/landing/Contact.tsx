@@ -9,6 +9,7 @@ const Contact = () => {
 	});
 	const [servicesRequested, setServicesRequested] = useState<string[]>([]);
 	const [success, setSuccess] = useState(false);
+	const [loading, setLoading] = useState(false);
 
 	const handleTextEntries =
 		(prop: 'name' | 'email' | 'message') =>
@@ -42,6 +43,7 @@ const Contact = () => {
 		e.preventDefault();
 		e.stopPropagation();
 		try {
+			setLoading(true);
 			await api.post('/api/contact/landing', {
 				...textEntries,
 				servicesRequested,
@@ -49,6 +51,8 @@ const Contact = () => {
 			setSuccess(true);
 		} catch (error) {
 			setSuccess(false);
+		} finally {
+			setLoading(false);
 		}
 	};
 
@@ -78,7 +82,7 @@ const Contact = () => {
 					</div>
 					<div className='w-full p-2 lg:p-4'>
 						{success ? (
-							<div className='text-center text-xl font-semibold'>
+							<div className='flex h-full w-full items-center justify-center text-center text-xl font-semibold'>
 								Your request has been noted, we&apos;ll get back
 								to you soon!
 							</div>
@@ -150,9 +154,14 @@ const Contact = () => {
 								></textarea>
 								<button
 									type='submit'
-									className='w-full rounded-lg bg-white py-[20px] px-[64px] text-primary transition-all duration-300 hover:bg-slate-100 md:w-fit lg:mx-auto'
+									disabled={loading}
+									className={`${
+										loading
+											? 'grayscale'
+											: 'hover:bg-slate-100'
+									} lw-full rounded-lg bg-white py-[20px] px-[64px] text-primary transition-all duration-300 md:w-fit lg:mx-auto`}
 								>
-									Submit
+									{loading ? 'Submitting...' : 'Submit'}
 								</button>
 							</form>
 						)}
