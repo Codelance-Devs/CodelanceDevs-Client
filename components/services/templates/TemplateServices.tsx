@@ -1,53 +1,53 @@
-import React from 'react'
+import React from 'react';
 
 const TemplateServices = () => {
-    const services = [
-        {
-            title: "Website Redesign",
-            description:
-                "Revitalize your online presence with our Website Revamp service. Our team of experts will work with you to modernize your website, improve its functionality, and enhance its design to reflect your brand and meet the needs of your customers. Whether you're looking to update your website's look and feel or add new features, we've got you covered.",
-        },
-        {
-            title: "E-Commerce Website",
-            description:
-                "Take your business to the next level with our Ecommerce Website service. We specialize in creating visually appealing, user-friendly, and fully-functional ecommerce websites that are optimized for conversions and sales. Our team will work with you to create an online store that meets your business needs and exceeds your expectations.",
-        },
-        {
-            title: "Website Maintanence",
-            description:
-                "Ensure your website stays up-to-date and running smoothly with our Website Maintenance service. Our team will handle all the technical aspects of maintaining your website, including software updates, security, backups, and more. With our maintenance service, you can focus on running your business while we take care of keeping your website running at peak performance.",
-        },
-        {
-            title: "Custom-Built Website",
-            description:
-                "Our team of developers will work with you to create a brand new website from scratch, tailored to your business needs and designed to reflect your brand and attract customers. Whether you're a new business or looking to rebrand, our Fresh Website service will help you establish a strong online presence.",
-        },
-    ];
-    return (
-        <div id="services" className="grid lg:grid-cols-2 py-16 lg:pb-[148px]">
-            <div className="flex flex-col items-center justify-start p-[8px] text-center md:p-4 lg:col-span-2">
-                <h1 className="mb-4 select-text text-[32px] font-medium text-[#23262f] md:text-[34px] lg:text-[40px]">
-                    Types of services we offer
-                </h1>
-                <p className="text-[18px] text-[#4c4f58]">
-                    Get the web development solution you need: SPAs, MPAs,
-                    static or dynamic
-                </p>
-            </div>
-            {services.map((service, idx) => (
-                <div key={idx} className="w-full px-[8px] py-4 md:p-4 ">
-                    <div className="group h-full w-full select-none rounded-3xl bg-[#f6f7fc] px-[24px] py-10 md:px-10 md:py-14">
-                        <h1 className={`mb-4 text-[#23262f] md:text-[22px]`}>
-                            {service.title}
-                        </h1>
-                        <p className="mb-[24px] text-justify text-[#777a85]">
-                            {service.description}
-                        </p>
-                    </div>
-                </div>
-            ))}
-        </div>
-    );
-}
+	const services = [
+		{
+			title: 'Code Templates (Coming Soon)',
+			description:
+				'Looking for a quick and efficient solution for your website or web app development? Our code-based templates provide a customizable foundation for you to build on, saving you time and effort in the development process. Our team of experts have designed these templates to be easy to use and tailored to meet your specific needs.',
+		},
+		{
+			title: 'WordPress',
+			description:
+				'WordPress is a powerful and versatile content management system that can be used to create a wide range of websites, from simple blogs to complex e-commerce sites. Our team of experts have extensive experience in creating custom WordPress themes and plugins to meet your specific needs. We can help you set up and customize your WordPress site, as well as provide ongoing maintenance and support',
+		},
+		{
+			title: 'WebFlow',
+			description:
+				'Webflow is a no-code website design and development platform that allows you to create responsive websites and web apps without writing code. Our team of experts have extensive experience in creating custom designs and interactions using Webflow. We can help you set up and customize your Webflow site, as well as provide ongoing maintenance and support.',
+		},
+		{
+			title: 'Platform of your Choice',
+			description:
+				"We understand that every business has unique needs and requirements. That's why we offer our clients the option to choose the platform that best suits their needs. Whether it's WordPress, Webflow, or any other platform, our team of experts have the skills and experience to set up and customize your site, as well as provide ongoing maintenance and support.",
+		},
+	];
+	return (
+		<div id='services' className='grid py-16 lg:grid-cols-2 lg:pb-[148px]'>
+			<div className='flex flex-col items-center justify-start p-[8px] text-center md:p-4 lg:col-span-2'>
+				<h1 className='mb-4 select-text text-[32px] font-medium text-[#23262f] md:text-[34px] lg:text-[40px]'>
+					Types of services we offer
+				</h1>
+				<p className='text-[18px] text-[#4c4f58]'>
+					Don&apos;t let the barrier of code stop you, use our ready
+					made templates to get started
+				</p>
+			</div>
+			{services.map((service, idx) => (
+				<div key={idx} className='w-full px-[8px] py-4 md:p-4 '>
+					<div className='group h-full w-full select-none rounded-3xl bg-[#f6f7fc] px-[24px] py-10 md:px-10 md:py-14'>
+						<h1 className={`mb-4 text-[#23262f] md:text-[22px]`}>
+							{service.title}
+						</h1>
+						<p className='mb-[24px] text-justify text-[#777a85]'>
+							{service.description}
+						</p>
+					</div>
+				</div>
+			))}
+		</div>
+	);
+};
 
-export default TemplateServices
+export default TemplateServices;
