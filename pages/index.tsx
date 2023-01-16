@@ -1,17 +1,24 @@
 import Head from 'next/head';
-import Landing from '../components/Landing';
+import FAQ from '../components/landing/FAQ';
+import Landing from '../components/landing/Landing';
 import PageLoader from '../components/PageLoader';
-import Services from '../components/Services';
+import Services from '../components/landing/Services';
+import PublicLayout from '../layouts/public';
+import Contact from '../components/landing/Contact';
 
 export default function Home() {
 	return (
-		<div>
+		<div className='selection:bg-[#00E07B10]'>
 			<Head>
 				<title>Codelance Devs</title>
 			</Head>
 			<PageLoader />
-			<Landing />
-			<Services />
+			<PublicLayout>
+				<Landing />
+				<Services />
+				<FAQ />
+				<Contact />
+			</PublicLayout>
 		</div>
 	);
 }
