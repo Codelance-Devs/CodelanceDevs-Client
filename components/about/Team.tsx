@@ -27,10 +27,10 @@ const team = [
 		description: 'Idea generating machine.',
 		designation: 'Co-Founder',
 		links: {
-			instagram: 'https://instagram.com/',
-			twitter: 'https://twitter.com/',
-			linkedin: 'https://linkedin.com/in/',
-			github: 'https://github.com/',
+			instagram: 'https://instagram.com/idkjay.7/',
+			twitter: 'https://twitter.com/CodelanceDevs',
+			linkedin: 'https://linkedin.com/in/jayanth-srinivasan-13b07521b',
+			github: 'https://github.com/Jayanth-Srinivasan',
 		},
 	},
 	{
