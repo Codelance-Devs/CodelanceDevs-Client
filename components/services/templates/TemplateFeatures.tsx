@@ -44,7 +44,7 @@ const TemplateFeatures = () => {
 	return (
 		<>
 			<div className='grid py-16 lg:grid-cols-4 lg:pb-[148px]'>
-				<div className='flex flex-col items-center justify-start p-[8px] text-center md:col-span-2 md:p-4 lg:col-span-4'>
+				<div className='col-span-2 flex flex-col items-center justify-start p-[8px] text-center md:col-span-2 md:p-4 lg:col-span-4'>
 					<h1 className='mb-4 select-text text-[32px] font-medium text-[#23262f] md:text-[34px] lg:text-[40px]'>
 						Features we deliver
 					</h1>
