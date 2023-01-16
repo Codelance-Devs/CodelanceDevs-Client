@@ -15,7 +15,7 @@ const Design = () => {
 			</Head>
 			<PublicLayout>
 				<div className='mx-auto flex w-full max-w-[1440px] flex-col px-3 md:px-5 lg:px-[5vw]'>
-					<section className='mx-auto flex w-full flex-col pt-28 lg:flex-row lg:py-[148px] md:pt-32'>
+					<section className='mx-auto flex w-full flex-col pt-28 md:pt-32 lg:flex-row lg:py-[148px]'>
 						<div className='h-1/2 w-full p-2 md:py-5 md:px-4 lg:h-full lg:w-1/2 lg:p-4 '>
 							<h1 className='mb-4 select-text text-[32px] font-medium text-[#23262f] md:text-[34px] lg:text-[40px]'>
 								UI/UX Design
@@ -37,7 +37,7 @@ const Design = () => {
 							<div className='pt-5'>
 								<Link href='/#getQuote'>
 									<button className='w-full rounded-xl bg-primary py-5 px-16 transition-all duration-300 hover:bg-[#05c870] md:w-fit'>
-										<h1 className='text-[14px] font-medium text-[#23262f]'>
+										<h1 className='text-[14px] font-medium text-white'>
 											Get Quotation
 										</h1>
 									</button>

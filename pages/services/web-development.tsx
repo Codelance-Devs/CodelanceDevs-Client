@@ -34,7 +34,7 @@ const WebDevelopment = () => {
 							<div className='pt-5'>
 								<Link href='/#getQuote'>
 									<button className='w-full rounded-xl bg-primary py-5 px-16 transition-all duration-300 hover:bg-[#05c870] md:w-fit'>
-										<h1 className='text-[14px] font-medium text-[#23262f]'>
+										<h1 className='text-[14px] font-medium text-white'>
 											Get Quotation
 										</h1>
 									</button>
