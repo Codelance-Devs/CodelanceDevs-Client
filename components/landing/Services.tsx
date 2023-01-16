@@ -50,7 +50,7 @@ const Services = () => {
 					Looking to find web services for your needs?
 				</h1>
 				<p className='text-[18px] text-[#4c4f58]'>
-					Get the best service starting from 17th January 2023.
+				Innovative web design and development at your service.
 				</p>
 			</div>
 			{services.map((service, idx) => (

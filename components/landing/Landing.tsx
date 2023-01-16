@@ -16,7 +16,7 @@ const Landing = () => {
                         <span className=" h-fit w-fit bg-[url('/underline.svg')] bg-bottom bg-no-repeat">
                             Building
                         </span>{" "}
-                        websites that wows, not just loads.
+                        websites that Wows, not just Loads.
                     </h1>
                     <p className="mb-6 text-[18px] font-normal text-[#777a85]">
                         Helping your personal & business needs reach new heights
