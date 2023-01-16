@@ -23,7 +23,7 @@ const team = [
 	{
 		name: 'Jayanth Srinivasan',
 		photoUrl:
-			'https://res.cloudinary.com/dm5excyly/image/upload/v1673215257/assets/members/jayanth-srinivasan.png',
+			'https://res.cloudinary.com/dm5excyly/image/upload/v1673884180/assets/members/jayanth-srinivasan.png',
 		description: 'Idea generating machine.',
 		designation: 'Co-Founder',
 		links: {
