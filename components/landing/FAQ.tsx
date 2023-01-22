@@ -11,7 +11,7 @@ import Link from 'next/link';
 
 const FAQ = () => {
 	return (
-		<section className='flex w-full scroll-mt-24' id='faqs'>
+		<section className='flex w-full scroll-mt-24 -z-50' id='faqs'>
 			<div className='mx-auto max-w-[1440px] px-3 py-16 md:px-5 lg:px-[5vw] lg:py-[148px]'>
 				<div className='flex flex-col items-stretch justify-start text-center'>
 					<div className='w-full justify-center p-2 md:p-4'>

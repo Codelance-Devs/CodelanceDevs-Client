@@ -56,7 +56,7 @@ const Navbar = () => {
 
 	return (
 		<nav
-			className={` ${color === "bg-transparent" ? "border-0" : "border-b"} ${color} transition-all duration-300 w-full fixed`}
+			className={` ${color === "bg-transparent" ? "border-0" : "border-b"} ${color} transition-all duration-300 w-full fixed z-50`}
 		>
 			<div className='mx-auto z-50 flex w-full p-3 md:px-5 md:py-3 lg:px-[5vw] lg:py-5  max-w-[1440px] items-center justify-between'>
 				<Link href='/' className='flex items-center'>
