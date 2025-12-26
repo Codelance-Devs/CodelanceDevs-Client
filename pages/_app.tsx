@@ -4,6 +4,7 @@ import { ThemeProvider } from '@mui/material';
 import { theme } from '../utils/theme';
 import createEmotionCache from '../utils/createEmotionCache';
 import { CacheProvider, EmotionCache  } from '@emotion/react';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -20,6 +21,7 @@ export default function App({
 		<CacheProvider value={emotionCache}>
 			<ThemeProvider theme={theme}>
 				<Component {...pageProps} />
+				<GoogleAnalytics gaId="G-RF2DJVEBGT" />
 			</ThemeProvider>
 		</CacheProvider>
 	);
